@@ -1,4 +1,4 @@
-import { Card } from "../components/Card";
+import { CardSection } from "../sections/Card";
 
 const GetStarted = () => {
 	return (
@@ -11,24 +11,7 @@ const GetStarted = () => {
 					rel="stylesheet"
 				/>
 			</head>
-            <Card
-                imageSrc="/path/to/image.png"
-                title="Managed agency selection"
-                description="Strengthen your onboarding process"
-                link="/desired-path"
-            />
-            <Card
-                imageSrc="/path/to/image.png"
-                title="Managed agency selection"
-                description="Strengthen your onboarding process"
-                link="/desired-path"
-            />
-            <Card
-                imageSrc="/path/to/image.png"
-                title="Managed agency selection"
-                description="Strengthen your onboarding process"
-                link="/desired-path"
-            />
+            <CardSection />
 		</>
 	);
 };
