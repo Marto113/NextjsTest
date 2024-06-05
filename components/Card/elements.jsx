@@ -4,46 +4,49 @@ import { SectionHeading, SectionParagraph } from '~/components';
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 25%;
-  height: 10%;
-  border: 1px solid #eaeaea;
+  width: 80%;
+  border: 2px solid #eaeaea;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s;
-
+  transition: border 0.2s;
+  margin-left: auto;
+  margin-right: auto;
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0096C7;
   }
 `;
 
 export const CardImage = styled.div`
   position: relative;
-  width: 30%;
+  width: 20%;
   background-color: #f0f0f0;
   overflow: hidden;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%; /* Takes 70% of the container's width */
-  padding: 16px;
+  padding: 1rem;
+  width: 80%;
 `;
 
 export const CardTitle = styled((props) => <SectionHeading {...props} />)`
   margin: 0;
+  font-size: 1rem;
   color: black;
+  transition: color 0.2s;
+
+  ${CardContainer}:hover & {
+    color: #0096C7;
+  }
 `;
 
 export const CardDescription = styled((props) => <SectionParagraph {...props} />)`
-  margin: 1.563rem 0 0;
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
 `;
